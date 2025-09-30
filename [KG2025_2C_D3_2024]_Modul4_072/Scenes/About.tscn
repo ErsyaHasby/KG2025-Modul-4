@@ -1,0 +1,67 @@
+[gd_scene load_steps=6 format=3 uid="uid://dxn4pvqq76s1n"]
+
+[ext_resource type="Script" path="res://Scripts/About.cs" id="1_6oxj2"]
+[ext_resource type="Texture2D" uid="uid://dpca5dvec0dlu" path="res://Assets/stadium1.jpg" id="2_1510s"]
+[ext_resource type="FontFile" uid="uid://bx18s2upjujtm" path="res://Assets/varsity_regular.ttf" id="3_3my8m"]
+[ext_resource type="Script" path="res://Scripts/BackBtn.cs" id="4_4wpxf"]
+[ext_resource type="Texture2D" uid="uid://30iwhwd7kmn5" path="res://Assets/MABOL1.jpg" id="5_q7owv"]
+
+[node name="About" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6oxj2")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_direction = 1
+layout_mode = 0
+offset_left = 2.0
+offset_top = -5.0
+offset_right = 1290.0
+offset_bottom = 721.0
+texture = ExtResource("2_1510s")
+expand_mode = 1
+
+[node name="BtnBack" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.112
+anchor_bottom = 0.728
+offset_left = 561.0
+offset_top = 607.0
+offset_right = 578.64
+offset_bottom = 163.84
+theme_override_fonts/font = ExtResource("3_3my8m")
+theme_override_font_sizes/font_size = 60
+text = "BACK"
+script = ExtResource("4_4wpxf")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 506.0
+offset_top = 56.0
+offset_right = 778.0
+offset_bottom = 362.0
+texture = ExtResource("5_q7owv")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 474.0
+offset_top = 406.0
+offset_right = 791.0
+offset_bottom = 523.0
+theme_override_fonts/font = ExtResource("3_3my8m")
+theme_override_font_sizes/font_size = 30
+text = "ERSYA HASBY SATRIA
+            D3 - 2C
+        241511072"
+
+[connection signal="pressed" from="BtnBack" to="." method="_on_BtnBack_pressed"]
